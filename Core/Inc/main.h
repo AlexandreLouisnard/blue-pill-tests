@@ -62,10 +62,6 @@ void Error_Handler(void);
 #define DEBUG_RX_GPIO_Port GPIOA
 #define DEBUG_TX_Pin GPIO_PIN_3
 #define DEBUG_TX_GPIO_Port GPIOA
-#define BLU_RX_Pin GPIO_PIN_9
-#define BLU_RX_GPIO_Port GPIOA
-#define BLU_TX_Pin GPIO_PIN_10
-#define BLU_TX_GPIO_Port GPIOA
 #define BLU_STAT_Pin GPIO_PIN_3
 #define BLU_STAT_GPIO_Port GPIOB
 #define BLU_NRST_Pin GPIO_PIN_5

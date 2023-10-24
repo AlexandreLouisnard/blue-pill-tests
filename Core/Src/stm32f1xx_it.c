@@ -56,7 +56,6 @@
 
 /* External variables --------------------------------------------------------*/
 extern TIM_HandleTypeDef htim2;
-extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 /* USER CODE BEGIN EV */
 
@@ -214,26 +213,7 @@ void TIM2_IRQHandler(void)
 
   // Blink in TIM2 interrupt
   HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
-
-  // Send data over UART in TIM2 interrupt
-   char* tx = "test\r\n";
-  HAL_UART_Transmit(&huart1, tx, strlen(tx), HAL_MAX_DELAY); // BLU
-  HAL_UART_Transmit(&huart2, tx, strlen(tx), HAL_MAX_DELAY); // DEBUG
   /* USER CODE END TIM2_IRQn 1 */
-}
-
-/**
-  * @brief This function handles USART1 global interrupt.
-  */
-void USART1_IRQHandler(void)
-{
-  /* USER CODE BEGIN USART1_IRQn 0 */
-
-  /* USER CODE END USART1_IRQn 0 */
-  HAL_UART_IRQHandler(&huart1);
-  /* USER CODE BEGIN USART1_IRQn 1 */
-
-  /* USER CODE END USART1_IRQn 1 */
 }
 
 /**
